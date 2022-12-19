@@ -8,9 +8,11 @@ python3 vnccrack.py [-H] [-P] [--port]
 ```
 
 ## Options
+```
 -H, --host: The hostname or IP address of the VNC server (required)
 -P, --passwordfile: The path to the file containing the passwords (required)
 --port: The port number of the VNC server (default: 5900)
+```
 
 ## Example
 To authenticate with the VNC server at localhost using the passwords in the file passwords.txt:
