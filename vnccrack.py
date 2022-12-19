@@ -28,17 +28,15 @@ def authenticate_with_vnc(host, port, password_file):
         sys.exit(1)
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-
+    parser = argparse.ArgumentParser(
+        usage='%(prog)s [-H] [-P] [--port]',
+        description='Bruteforce a VNC server using a list of passwords'
+    )
     parser.add_argument('-H', '--host', required=True, help='The hostname or IP address of the VNC server')
     parser.add_argument('-P', '--passwordfile', required=True, help='The path to the file containing the passwords')
-
     parser.add_argument('--port', default=5900, type=int, help='The port number of the VNC server (default: 5900)')
-
     args = parser.parse_args()
-
     if args.port < 0 or args.port > 65535:
         print('Error: Invalid port number')
         sys.exit(1)
-
     authenticate_with_vnc(args.host, args.port, args.passwordfile)
