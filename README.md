@@ -2,6 +2,16 @@
 
 This script allows to bruteforce a VNC server using a list of passwords.
 
+## Installation
+Clone the script to your system using git.
+```
+git clone https://github.com/pr0d33p/vnccrack/
+```
+Install the required dependencies
+```
+pip install pyvnc
+```
+
 ## Usage
 ```
 python3 vnccrack.py [-H] [-P] [--port]
